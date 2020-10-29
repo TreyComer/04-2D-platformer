@@ -1,0 +1,387 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Player/Player_Container.gd" type="Script" id=1]
+[ext_resource path="res://Assets/spritesheet_default.png" type="Texture" id=2]
+[ext_resource path="res://Assets/black.png" type="Texture" id=3]
+[ext_resource path="res://Camera/Camera2D.gd" type="Script" id=4]
+[ext_resource path="res://Enemy/Enemy_ground.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemy/Enemy_Container.gd" type="Script" id=6]
+[ext_resource path="res://Enemy/Enemy_Flying.tscn" type="PackedScene" id=7]
+[ext_resource path="res://HUD/UI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Levels/Portal.gd" type="Script" id=11]
+[ext_resource path="res://Assets/tile_door.png" type="Texture" id=12]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( 0, 60.784, 31.2801, 3.76001, 60.6561, 60.784 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 1.90405, 59.056, 33.008, 5.48798, 58.928, 60.784 )
+
+[sub_resource type="OccluderPolygon2D" id=5]
+polygon = PoolVector2Array( 3.56805, 12.336, 1.84003, 62.4481, 57.136, 60.72, 58.8641, 10.608, 48.496, 5.42401, 34.6721, 8.88, 19.1201, 15.792 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 22.5761, 14.064, 31.216, 8.88, 45.0401, 5.42401, 58.8641, 8.88, 58.8641, 60.72, 0.112, 62.4481, 1.84003, 10.608 )
+
+[sub_resource type="OccluderPolygon2D" id=7]
+polygon = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="OccluderPolygon2D" id=9]
+polygon = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="TileSet" id=11]
+0/name = "spritesheet_default.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 192, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/occluder = SubResource( 1 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "spritesheet_default.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 192, 64, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/occluder = SubResource( 3 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 4 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "spritesheet_default.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 256, 128, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/occluder = SubResource( 5 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 6 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "spritesheet_default.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 256, 320, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/occluder = SubResource( 7 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 8 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "spritesheet_default.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 320, 320, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/occluder = SubResource( 9 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 10 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+
+[sub_resource type="TileSet" id=13]
+0/name = "spritesheet_default.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 640, 64, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "spritesheet_default.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 640, 128, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "spritesheet_default.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 640, 256, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "spritesheet_default.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 640, 192, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "spritesheet_default.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "spritesheet_default.png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 64, 0, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "spritesheet_default.png 6"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 64, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "spritesheet_default.png 7"
+7/texture = ExtResource( 2 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 64, 64, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+
+[node name="Game" type="Node2D"]
+
+[node name="Ground" type="TileMap" parent="."]
+position = Vector2( -1, 0 )
+tile_set = SubResource( 11 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( -65536, 4, 0, -65506, 4, 0, 0, 4, 0, 30, 4, 0, 65536, 4, 0, 65566, 4, 0, 131072, 4, 0, 131102, 4, 0, 196608, 4, 0, 196638, 4, 0, 262144, 4, 0, 262174, 4, 0, 327680, 4, 0, 327710, 4, 0, 393216, 4, 0, 393246, 4, 0, 458752, 4, 0, 458782, 4, 0, 524288, 4, 0, 524306, 1, 0, 524318, 4, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 3, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0 )
+
+[node name="Platform" type="TileMap" parent="."]
+position = Vector2( -1, 0 )
+tile_set = SubResource( 11 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( -65536, 4, 0, -65506, 4, 0, 0, 4, 0, 30, 4, 0, 65536, 4, 0, 65566, 4, 0, 131072, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 131078, 4, 0, 131087, 4, 0, 131088, 4, 0, 131089, 4, 0, 131090, 4, 0, 131102, 4, 0, 196608, 4, 0, 196631, 4, 0, 196632, 4, 0, 196633, 4, 0, 196638, 4, 0, 262144, 4, 0, 262153, 4, 0, 262154, 4, 0, 262155, 4, 0, 262156, 4, 0, 262174, 4, 0, 327680, 4, 0, 327687, 4, 0, 327710, 4, 0, 393216, 4, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 393231, 4, 0, 393236, 4, 0, 393237, 4, 0, 393238, 4, 0, 393246, 4, 0, 458752, 4, 0, 458778, 4, 0, 458779, 4, 0, 458782, 4, 0, 524288, 4, 0, 524306, 1, 0, 524318, 4, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 3, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0 )
+
+[node name="Player_Container" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="Enemy_Container" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="Enemy_ground" parent="Enemy_Container" instance=ExtResource( 5 )]
+max_constraint = 1100
+min_constraint = 600
+
+[node name="Enemy_Flying" parent="Enemy_Container" instance=ExtResource( 7 )]
+
+[node name="Enemy_ground2" parent="Enemy_Container" instance=ExtResource( 5 )]
+position = Vector2( 1500, 548 )
+max_constraint = 1650
+min_constraint = 1250
+
+[node name="Coin_container" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coin_container" instance=ExtResource( 10 )]
+
+[node name="Coin2" parent="Coin_container" instance=ExtResource( 10 )]
+position = Vector2( 691.105, 234.929 )
+
+[node name="Coin3" parent="Coin_container" instance=ExtResource( 10 )]
+position = Vector2( 1722, 417 )
+
+[node name="Coin4" parent="Coin_container" instance=ExtResource( 10 )]
+position = Vector2( 1388, 547 )
+
+[node name="Coin5" parent="Coin_container" instance=ExtResource( 10 )]
+position = Vector2( 1386, 357 )
+
+[node name="Coin6" parent="Coin_container" instance=ExtResource( 10 )]
+position = Vector2( 626.069, 533.38 )
+
+[node name="Coin7" parent="Coin_container" instance=ExtResource( 10 )]
+position = Vector2( 310.691, 103.076 )
+
+[node name="Coin8" parent="Coin_container" instance=ExtResource( 10 )]
+position = Vector2( 992, 349 )
+
+[node name="Coin9" parent="Coin_container" instance=ExtResource( 10 )]
+position = Vector2( 1086, 93 )
+
+[node name="Coin10" parent="Coin_container" instance=ExtResource( 10 )]
+position = Vector2( 1840, 537 )
+
+[node name="Coin11" parent="Coin_container" instance=ExtResource( 10 )]
+position = Vector2( 1574, 157 )
+
+[node name="Portal_to_2" type="Area2D" parent="."]
+position = Vector2( 1100, 100 )
+script = ExtResource( 11 )
+
+[node name="Sprite" type="Sprite" parent="Portal_to_2"]
+texture = ExtResource( 12 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Portal_to_2"]
+polygon = PoolVector2Array( 24, -27.2, 24, -25.8, 31, -18.8, 31, -16.5, 32, -14.9, 32, 32, -32, 32, -32, -16, -22, -29, -19.5, -29, -14.2, -32, 14.4, -32 )
+
+[node name="Foreground" type="TileMap" parent="."]
+tile_set = SubResource( 13 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 15, 6, 0, 16, 7, 0, 26, 4, 0, 27, 5, 0, 65557, 4, 0, 65558, 5, 0, 131083, 4, 0, 131084, 5, 0, 196635, 6, 0, 196636, 5, 0, 262147, 6, 0, 262148, 7, 0, 262164, 6, 0, 262165, 7, 0, 458753, 0, 0, 458756, 3, 0, 458759, 3, 0, 458763, 0, 0, 458764, 3, 0, 458766, 0, 0, 458775, 3, 0, 458776, 0, 0, 524289, 1, 0, 524292, 2, 0, 524295, 2, 0, 524299, 1, 0, 524300, 2, 0, 524302, 1, 0, 524311, 2, 0, 524312, 1, 0 )
+
+[node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
+light_mask = 0
+position = Vector2( 991.799, 287.788 )
+scale = Vector2( 8.8012, 3.11415 )
+texture = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -1.5874, -42.8598 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 1980
+limit_bottom = 700
+drag_margin_left = 0.1
+drag_margin_top = 0.1
+drag_margin_right = 0.1
+drag_margin_bottom = 0.1
+script = ExtResource( 4 )
+
+[node name="UI" parent="." instance=ExtResource( 9 )]
+[connection signal="body_entered" from="Coin_container/Coin" to="Coin_container/Coin" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Coin_container/Coin2" to="Coin_container/Coin2" method="_on_Coin2_body_entered"]
+[connection signal="body_entered" from="Coin_container/Coin3" to="Coin_container/Coin3" method="_on_Coin3_body_entered"]
+[connection signal="body_entered" from="Coin_container/Coin4" to="Coin_container/Coin4" method="_on_Coin4_body_entered"]
+[connection signal="body_entered" from="Coin_container/Coin5" to="Coin_container/Coin5" method="_on_Coin5_body_entered"]
+[connection signal="body_entered" from="Coin_container/Coin6" to="Coin_container/Coin6" method="_on_Coin6_body_entered"]
+[connection signal="body_entered" from="Coin_container/Coin7" to="Coin_container/Coin7" method="_on_Coin7_body_entered"]
+[connection signal="body_entered" from="Coin_container/Coin8" to="Coin_container/Coin8" method="_on_Coin8_body_entered"]
+[connection signal="body_entered" from="Coin_container/Coin9" to="Coin_container/Coin9" method="_on_Coin9_body_entered"]
+[connection signal="body_entered" from="Coin_container/Coin10" to="Coin_container/Coin10" method="_on_Coin10_body_entered"]
+[connection signal="body_entered" from="Coin_container/Coin11" to="Coin_container/Coin11" method="_on_Coin11_body_entered"]
+[connection signal="body_entered" from="Portal_to_2" to="Portal_to_2" method="_on_Portal_body_entered"]
